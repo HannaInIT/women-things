@@ -14,7 +14,7 @@ A modern, minimalistic e-commerce web application built with React. Browse produ
 
 ## 🚀 Live Demo
 
-[View Live Demo](#) _(https://thriving-mermaid-aaea0e.netlify.app/)_
+[View Live Demo](#) _(https://women-things.netlify.app/)_
 
 ## 🛠️ Built With
 
@@ -35,8 +35,8 @@ Before you begin, ensure you have the following installed:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/HannaInIT/react-project.git
-cd react-project
+git clone https://github.com/HannaInIT/women-things.git
+cd women-things
 ```
 
 ### 2. Install dependencies
@@ -60,7 +60,7 @@ The app will open at `http://localhost:5173` (or another port if 5173 is busy).
 ## 📁 Project Structure
 
 ```
-react-project/
+women-things/
 ├── public/
 ├── src/
 │   ├── assets/           # Images and icons
@@ -131,5 +131,3 @@ This project uses the [DummyJSON API](https://dummyjson.com/) for product data.
 - [DummyJSON](https://dummyjson.com/) for the API
 - [React](https://react.dev/) for the framework
 - [Vite](https://vitejs.dev/) for the build tool
-
-⭐ **If you like this project, please give it a star!** ⭐
