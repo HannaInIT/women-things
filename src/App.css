@@ -140,11 +140,9 @@ header {
   padding: 0 24px 0 24px;
   border-bottom: 1px solid #e2e6e9;
   width: 100%;
-
   position: sticky;
   background-color: #fff;
   top: 0;
-
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -155,19 +153,10 @@ header {
   align-items: center;
 }
 
-.logo h1 {
-  margin: 0;
-  color: 131111;
-  font-size: 1.2rem;
-  text-decoration: none;
-}
-
-.logo a {
-  text-decoration: none;
-}
-
 .logo:hover {
-  /* filter: drop-shadow(0 0 2em #646cffaa); */
+  transform: scale(1.05);
+  filter: drop-shadow(0 2px 8px #646cffaa);
+  transition: all 0.3s ease;
 }
 
 .nav-menu {
@@ -461,6 +450,12 @@ header {
   margin-top: auto;
 }
 
+.add-to-cart-btn:hover {
+  transform: scale(1.02);
+  filter: drop-shadow(0 2px 4px #646cffaa);
+  transition: all 0.3s ease;
+}
+
 .add-to-cart-btn--added {
   color: #27ae60;
   background-color: transparent;
@@ -557,6 +552,10 @@ header {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.category-header h1 {
+  font-size: 45px;
 }
 
 .top-categories h2 {
@@ -1049,4 +1048,18 @@ footer {
 
 .back-btn {
   background-color: #e2e6e9;
+  outline: none;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+  transform: scale(1.01);
+  filter: drop-shadow(0 2px 4px #646cffaa);
+  transition: all 0.3s ease;
+}
+
+.back-btn:focus,
+.back-btn:active {
+  outline: none;
 }
