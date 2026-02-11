@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import { icons } from "../assets";
 
 export default function Footer() {
   const handleBackToTop = () => {
@@ -10,7 +11,11 @@ export default function Footer() {
         {/* logo */}
         <div className="logo">
           <Link to="/">
-            <h1>LOGO</h1>
+            <img
+              src={icons.logo}
+              alt="Women Things Logo"
+              className="logo-img"
+            />
           </Link>
         </div>
 
@@ -23,7 +28,8 @@ export default function Footer() {
         <button
           type="button"
           onClick={handleBackToTop}
-          aria-label="Back to top" className="back-btn"
+          aria-label="Back to top"
+          className="back-btn"
         >
           Back to top
         </button>

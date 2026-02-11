@@ -1,3 +1,6 @@
+// logo
+import logo from "../assets/icons/logo.svg";
+
 // icons
 import searchIcon from "../assets/icons/search.svg";
 import closeIcon from "../assets/icons/close-or-remove.svg";
@@ -22,6 +25,7 @@ export const icons = {
   heartOutlined: heartOutlinedIcon,
   cart: cartIcon,
   heartFilled: heartFilledIcon,
+  logo: logo,
 };
 
 export const categories = {

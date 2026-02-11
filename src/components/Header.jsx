@@ -35,7 +35,7 @@ export default function Header() {
 
     try {
       const response = await fetch(
-        `https://dummyjson.com/products/search?q=${searchString}`
+        `https://dummyjson.com/products/search?q=${searchString}`,
       );
 
       if (!response.ok) {
@@ -44,7 +44,7 @@ export default function Header() {
 
       const data = await response.json();
       const filtered = data.products.filter((product) =>
-        allowedCategories.includes(product.category)
+        allowedCategories.includes(product.category),
       );
 
       setSearchResults(filtered);
@@ -59,7 +59,7 @@ export default function Header() {
     debounce((searchString) => {
       fetchProductsOnSearch(searchString);
     }, 300),
-    []
+    [],
   );
 
   const handleProductClick = () => {
@@ -99,7 +99,7 @@ export default function Header() {
       {/* logo */}
       <div className="logo">
         <Link to="/">
-          <h1>LOGO</h1>
+          <img src={icons.logo} alt="Women Things Logo" className="logo-img" />
         </Link>
       </div>
 
@@ -173,16 +173,24 @@ export default function Header() {
                     <div className="search-item-price-wrapper">
                       {product.discountPercentage ? (
                         <>
-                          <span className="search-item-price-old">€{product.price.toFixed(2)}</span>
-                          <span className="search-item-price"> €{getDiscountPrice(product.price, product.discountPercentage)}</span>
-                         
+                          <span className="search-item-price-old">
+                            €{product.price.toFixed(2)}
+                          </span>
+                          <span className="search-item-price">
+                            {" "}
+                            €
+                            {getDiscountPrice(
+                              product.price,
+                              product.discountPercentage,
+                            )}
+                          </span>
                         </>
-                      )
-                        : (
-                        <span className="search-item-price">€{product.price.toFixed(2)}</span>  
-                    )}
-                      
-                      </div>
+                      ) : (
+                        <span className="search-item-price">
+                          €{product.price.toFixed(2)}
+                        </span>
+                      )}
+                    </div>
                   </div>
                 </Link>
               ))
